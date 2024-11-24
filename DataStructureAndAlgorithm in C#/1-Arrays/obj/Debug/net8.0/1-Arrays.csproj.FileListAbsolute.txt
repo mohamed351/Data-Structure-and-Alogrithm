@@ -1,0 +1,14 @@
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\bin\Debug\net8.0\1-Arrays.exe
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\bin\Debug\net8.0\1-Arrays.deps.json
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\bin\Debug\net8.0\1-Arrays.runtimeconfig.json
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\bin\Debug\net8.0\1-Arrays.dll
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\bin\Debug\net8.0\1-Arrays.pdb
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\1-Arrays.GeneratedMSBuildEditorConfig.editorconfig
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\1-Arrays.AssemblyInfoInputs.cache
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\1-Arrays.AssemblyInfo.cs
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\1-Arrays.csproj.CoreCompileInputs.cache
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\1-Arrays.dll
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\refint\1-Arrays.dll
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\1-Arrays.pdb
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\1-Arrays.genruntimeconfig.cache
+D:\Odoo\odooIntegration\DataStructureAndAlgorithm\1-Arrays\obj\Debug\net8.0\ref\1-Arrays.dll
