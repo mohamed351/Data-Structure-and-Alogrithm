@@ -14,6 +14,7 @@ int RecusionSumElements(struct Node* ptr);
 int CountElements(struct Node* ptr);
 int GetMaxNumber(struct Node* ptr);
 void InsertAtPosition(struct Node** ptr, int data, int position);
+int DeleteElement(struct Node** ptr, int index);
 int main() {
 
 	struct Node* First = NULL;
@@ -52,9 +53,11 @@ int main() {
 
 	InsertAtPosition(&First, 90, 0);
 
-	InsertAtPosition(&First, 80, 3);
+	//InsertAtPosition(&First, 80, 3);
 	Display(First);
-
+	DeleteElement(&First, 1);
+	printf("==========================\n");
+	Display(First);
 	
 	return 0;
 }
@@ -185,5 +188,34 @@ void InsertAtPosition(struct Node ** ptr,int data, int position) {
 	}
 	newNode->Next = temp->Next;
 	temp = newNode;
+
+}
+int DeleteElement(struct Node** ptr, int index) {
+
+	struct Node* temp = NULL;
+	if (index < 0 || index > CountElements(*ptr)) {
+		return -1;
+	}
+	if (index == 0) {
+		temp = *ptr;
+		*ptr = (*ptr)->Next;
+		int data = (*ptr)->Data;
+		free(temp);
+		return data;
+	}
+	else {
+		struct Node* p = *ptr;
+		struct Node* q = (*ptr)->Next;
+		for (int i = 0; i < index; i++)
+		{
+			q = p;
+			p = p->Next;
+		}
+		q->Next = p->Next;
+		int data = p->Data;
+		free(p);
+
+		return  data;
+	}
 
 }
