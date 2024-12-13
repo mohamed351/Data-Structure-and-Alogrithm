@@ -15,6 +15,7 @@ int CountElements(struct Node* ptr);
 int GetMaxNumber(struct Node* ptr);
 void InsertAtPosition(struct Node** ptr, int data, int position);
 int DeleteElement(struct Node** ptr, int index);
+struct Node* Search(struct Node* ptr, int key);
 int main() {
 
 	struct Node* First = NULL;
@@ -53,10 +54,16 @@ int main() {
 
 	InsertAtPosition(&First, 90, 0);
 
-	//InsertAtPosition(&First, 80, 3);
-	Display(First);
-	DeleteElement(&First, 1);
-	printf("==========================\n");
+	struct Node* searchItem = Search(First, 9);
+	if (searchItem != NULL) {
+
+		printf("Search for element is %d \n", searchItem->Data);
+	}
+	else {
+		printf("Element is not found \n");
+	}
+
+	
 	Display(First);
 	
 	return 0;
@@ -102,7 +109,6 @@ void InsertAtLast(struct Node** First, int data) {
 	if (*First == NULL) {
 		*First = CreateNode(data);
 		
-
 	}
 	else {
 
@@ -218,4 +224,15 @@ int DeleteElement(struct Node** ptr, int index) {
 		return  data;
 	}
 
+}
+struct Node* Search(struct Node* ptr, int key) {
+
+	while (ptr != NULL)
+	{
+		if (ptr->Data == key) {
+			return ptr;
+		}
+		ptr = ptr->Next;
+	}
+	return NULL;
 }
