@@ -16,6 +16,7 @@ int GetMaxNumber(struct Node* ptr);
 void InsertAtPosition(struct Node** ptr, int data, int position);
 int DeleteElement(struct Node** ptr, int index);
 struct Node* Search(struct Node* ptr, int key);
+struct Node* ImporvedSearch(struct Node** ptr, int key);
 int main() {
 
 	struct Node* First = NULL;
@@ -54,16 +55,26 @@ int main() {
 
 	InsertAtPosition(&First, 90, 0);
 
-	struct Node* searchItem = Search(First, 9);
-	if (searchItem != NULL) {
+	//struct Node* searchItem = Search(First, 9);
+	//if (searchItem != NULL) {
 
-		printf("Search for element is %d \n", searchItem->Data);
-	}
-	else {
-		printf("Element is not found \n");
-	}
+	//	printf("Search for element is %d \n", searchItem->Data);
+	//}
+	//else {
+	//	printf("Element is not found \n");
+	//}
 
-	
+	//struct Node * searchElementImproved =  ImporvedSearch(&First, 3);
+	//if (searchElementImproved != NULL) {
+	//	printf("Search for element is %d", searchElementImproved->Data);
+	//	printf("The Node and the head changed to %d", First->Data);
+	//}
+
+	InsertAtPosition(&First, 5, 0);
+	InsertAtPosition(&First, 9, 1);
+	DeleteElement(&First, 0);
+	DeleteElement(&First, 0);
+	DeleteElement(&First, 2);
 	Display(First);
 	
 	return 0;
@@ -187,13 +198,22 @@ int GetMaxNumber(struct Node* ptr) {
 void InsertAtPosition(struct Node ** ptr,int data, int position) {
 
 	struct Node* newNode = CreateNode(data);
-	struct Node* temp = *ptr;
-	for (int i = 0;i < position - 1;i++) {
+	if (position == 0) {
+		newNode->Next = *ptr;
+		*ptr = newNode;
 
-		temp = temp->Next;
 	}
-	newNode->Next = temp->Next;
-	temp = newNode;
+	else {
+		struct Node* temp = *ptr;
+		for (int i = 0;i < position-1 && temp != NULL;i++) {
+			temp = temp->Next;
+		}
+
+		newNode->Next = temp->Next;
+		temp->Next = newNode;
+
+
+	}
 
 }
 int DeleteElement(struct Node** ptr, int index) {
@@ -235,4 +255,25 @@ struct Node* Search(struct Node* ptr, int key) {
 		ptr = ptr->Next;
 	}
 	return NULL;
+}
+struct Node* ImporvedSearch(struct Node** ptr, int key) {
+
+	struct Node* q = NULL;
+	struct Node* temp = *ptr;
+
+	while (temp != NULL)
+	{
+		if (temp->Data == key) {
+
+			q->Next = temp->Next;
+			temp->Next = *ptr;
+			*ptr = temp;
+			return *ptr;
+		}
+		q = temp;
+		temp = temp->Next;
+	}
+
+	return NULL;
+
 }
