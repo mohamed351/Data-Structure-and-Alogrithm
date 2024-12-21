@@ -155,6 +155,23 @@ int DeleteNode(struct Node*& First, int index) {
 
 
 }
+
+void Reverse(struct Node*& First) {
+
+	struct Node * p = First;
+	struct Node* q = NULL, * r = NULL;
+
+	while (p)
+	{
+		r = q;
+		q = p;
+		p = p->next;
+		q->next = r;
+	}
+	First = q;
+	
+
+}
 int main() {
 
 	int A[] = { 2,4,6,8 };
@@ -171,7 +188,8 @@ int main() {
 	//InsertSorted(First, 1);
 	//InsertSorted(First, 7);
 	//InsertSorted(First, 9);
-	printf("Deleting Element at index %d \n", DeleteNode(First, 3));
+	/*printf("Deleting Element at index %d \n", DeleteNode(First, 3));*/
+	Reverse(First);
 	Display(First);
 
 
