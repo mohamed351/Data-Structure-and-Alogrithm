@@ -172,9 +172,22 @@ void Reverse(struct Node*& First) {
 	
 
 }
+void RemoveDuplicate(struct Node*& First) {
+
+	struct Node* q = First;
+	struct Node* p = First->next;
+	while (p!=NULL)
+	{
+		if (q->data == p->data) {
+			q->next = p->next;
+		}
+		q = p;
+		p = p->next;
+	}
+}
 int main() {
 
-	int A[] = { 2,4,6,8 };
+	int A[] = { 2,6,6,7,8,8,8,9};
 	struct Node* First = NULL;
 	Create(First, A, 4);
 	Display(First);
@@ -189,7 +202,9 @@ int main() {
 	//InsertSorted(First, 7);
 	//InsertSorted(First, 9);
 	/*printf("Deleting Element at index %d \n", DeleteNode(First, 3));*/
-	Reverse(First);
+	RemoveDuplicate(First);
+	/*Reverse(First);*/
+	printf("--------------------Display Duplicate  ----------------- \n");
 	Display(First);
 
 
