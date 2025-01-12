@@ -1,3 +1,5 @@
 ﻿  main.c
-E:\Project 2025\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackUsingLinkedList\ParntheisMatching\main.c(58,40): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
-  ParntheisMatching.vcxproj -> E:\Project 2025\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackUsingLinkedList\x64\Debug\ParntheisMatching.exe
+E:\New folder (20)\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackUsingLinkedList\ParntheisMatching\main.c(58,40): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+E:\New folder (20)\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackUsingLinkedList\ParntheisMatching\main.c(101,35): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+E:\New folder (20)\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackUsingLinkedList\ParntheisMatching\main.c(99,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  ParntheisMatching.vcxproj -> E:\New folder (20)\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackUsingLinkedList\x64\Debug\ParntheisMatching.exe
