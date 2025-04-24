@@ -1,3 +1,4 @@
 ﻿  main.c
-E:\Project 2025\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackArrayPractice\StackArrayPractice\main.c(47): warning C4715: 'Peek': not all control paths return a value
-  StackArrayPractice.vcxproj -> E:\Project 2025\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackArrayPractice\x64\Debug\StackArrayPractice.exe
+E:\New folder (20)\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackArrayPractice\StackArrayPractice\main.c(47): warning C4715: 'Peek': not all control paths return a value
+  LINK : E:\New folder (20)\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackArrayPractice\x64\Debug\StackArrayPractice.exe not found or not built by the last incremental link; performing full link
+  StackArrayPractice.vcxproj -> E:\New folder (20)\Data-Structure-and-Alogrithm\DataStructureAndAlgorithm  in C\StackArrayPractice\x64\Debug\StackArrayPractice.exe

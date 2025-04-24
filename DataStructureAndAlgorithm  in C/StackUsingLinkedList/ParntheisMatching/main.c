@@ -75,9 +75,63 @@ int isBalance(char * expression) {
 	return IsEmpty(st);
 
 }
+int isOperand(char character) {
+	if (character == '+' || character == '-' || character == '*' || character == '/') {
+		return 0;
+	}
+	else {
+		return 1;
+	}
+}
+int Pre(char x) {
+	if (x == '+' || x == '-') {
+		return 1;
+	}
+	else if (x == '*' || x == '/') {
+		return 2;
+	}
+	else {
+		return 0;
+	}
+}
+char* InToPost(char* infix) {
+	int i = 0, j = 0;
+	int len = strlen(infix);
+	struct Stack st;
+	Intialization(&st, strlen(infix) + 1);
+	char* postfix = (char*)malloc((len + 2) * sizeof(char));
+	while (infix[i] != '\0')
+	{
+		if (isOperand(infix[i])) {
+			postfix[j++] = infix[i++];
+		}
+		else {
+
+			if (Pre(infix[i]) > Pre(StackTop(st))) {
+				Push(&st,infix[i]);
+				i++;
+			}
+			else {
+				postfix[j++] = Pop(&st);
+
+			}
+
+		}
+		
+	}
+	while (!IsEmpty(st))
+	{
+		postfix[j++] = Pop(&st);
+	}
+	postfix[j] = '\0';
+	return postfix;
+
+}
 int main() {
-	char* expression = "(a+b))";
-	printf("%d \n", isBalance(expression));
+	char* expression = "a+b*c";
+	//printf("%d \n", isBalance(expression));
+	char* data = InToPost(expression);
+	printf("%s", data);
 
 	return 0;
 }
