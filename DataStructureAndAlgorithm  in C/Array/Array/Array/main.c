@@ -26,6 +26,10 @@ int main() {
 
 	Insert(&arr, 2, 5);
 	Display(arr);
+	printf("=========Deleting item======= \n");
+	Delete(&arr, 2);
+	Display(arr);
+
 
 
 	return 0;

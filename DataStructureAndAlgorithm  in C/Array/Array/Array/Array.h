@@ -64,3 +64,16 @@ void Insert(struct Array* array, int index, int value) {
 	}
 
 }
+int Delete(struct Array* arr, int index) {
+	if (index >= 0 && index < arr->length) {
+		int i = 0;
+		int selectedData = arr->data[index];
+		for (i = index;i < arr->length - 1;i++) {
+			arr->data[i] = arr->data[i + 1];
+		}
+		arr->length--;
+		return selectedData;
+	
+	}
+	return 0;
+}
